@@ -15,3 +15,10 @@ Invoke with
 ```bash
 python ldparser.py /path/to/some/dir
 ```
+
+## Convert csv files to ld files
+To convert csv files to ld files, use the following command:
+
+```bash
+python csv_to_ld.py /path/to/csvfile.csv
+```
