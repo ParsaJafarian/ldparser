@@ -465,6 +465,7 @@ if __name__ == '__main__':
         print("Usage: ldparser.py /some/path/")
         exit(1)
 
+<<<<<<< HEAD
     for f in glob.glob('%s/*.ld'%sys.argv[1]):
         print(os.path.basename(f))
 
@@ -478,3 +479,21 @@ if __name__ == '__main__':
             df = pd.DataFrame({i.name.lower(): i.data for i in g})
             df.plot()
             plt.show()
+=======
+
+    print(sys.argv[1])
+    print(glob.glob('%s/*.ld'%sys.argv[1]))
+
+    ld_file_path: str = sys.argv[1]
+    l: ldData = ldData.fromfile(ld_file_path)
+    print(l.head)
+
+    print(os.path.basename(ld_file_path))
+    print(list(map(str, l)))
+
+    # create plots for all channels with the same frequency
+    for f, g in groupby(l.channs, lambda x:x.freq):
+        df = pd.DataFrame({i.name.lower(): i.data for i in g})
+        df.plot()
+        plt.show()
+>>>>>>> cc40362 (Init commit)
