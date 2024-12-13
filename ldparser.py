@@ -467,7 +467,7 @@ if __name__ == '__main__':
 
     ld_file_path: str = sys.argv[1]
     l: ldData = ldData.fromfile(ld_file_path)
-    print(os.path.basename(l))
+    # print(os.path.basename(l))
     print(l.head)
 
     print(os.path.basename(ld_file_path))
