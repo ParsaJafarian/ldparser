@@ -20,5 +20,5 @@ python ldparser.py /path/to/some/dir
 To convert csv files to ld files, use the following command:
 
 ```bash
-python csv_to_ld.py /path/to/csvfile.csv
+python csv_to_ld.py /path/to/csvfile.csv /path/to/ldfile.ld
 ```
